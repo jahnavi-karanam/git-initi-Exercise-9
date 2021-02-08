@@ -1,0 +1,316 @@
+Exercise - 9 
+Github link - https://github.com/jahnavi-karanam/git-initi-Exercise-9
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python (main)
+$ git clone https://github.com/jahnavi-karanam/git-initi-Exercise-9.git
+Cloning into 'git-initi-Exercise-9'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python (main)
+$ cd git-init-Exercise-9
+bash: cd: git-init-Exercise-9: No such file or directory
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python (main)
+$ cd git-initi-Exercise-9
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ cat > index.html
+this is a new line added
+this is line 2
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git commit
+[main 27f8c04] this is new file
+ 1 file changed, 2 insertions(+)
+ create mode 100644 index.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git chekcout my-feature
+git: 'chekcout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ cat > about-us.html
+this is a new branch file
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git add
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git add about-us.html
+warning: LF will be replaced by CRLF in about-us.html.
+The file will have its original line endings in your working directory
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git commit
+[main be8b44c] this is a new file in the branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 about-us.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git checkout main
+Already on 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ vi index.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git checkout my-feature
+error: pathspec 'my-feature' did not match any file(s) known to git
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ vi index.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git checkout -b my-feature
+Switched to a new branch 'my-feature'
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (my-feature)
+$ cat > about-us1.html
+this is new file in branch
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (my-feature)
+$ git add about-us1.html
+warning: LF will be replaced by CRLF in about-us1.html.
+The file will have its original line endings in your working directory
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (my-feature)
+$ git commit
+[my-feature 306bb83] this is new file in branch
+ 1 file changed, 1 insertion(+)
+ create mode 100644 about-us1.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (my-feature)
+$ vi about-us1.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (my-feature)
+$ vi index.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (my-feature)
+$ git commit
+On branch my-feature
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   about-us1.html
+        modified:   index.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (my-feature)
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        about-us1.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (my-feature)
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+        about-us1.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (my-feature)
+$ git commit about-us1.html
+warning: LF will be replaced by CRLF in about-us1.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in about-us1.html.
+The file will have its original line endings in your working directory
+[my-feature 85abbaa] this is a new file in branch
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (my-feature)
+$ git checkout main
+Switched to branch 'main'
+M       index.html
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ vi index.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ vi index.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git commit index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+[main a495e57] new line added
+ 1 file changed, 4 insertions(+)
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git push
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (9/9), 817 bytes | 408.00 KiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/jahnavi-karanam/git-initi-Exercise-9.git
+   3e0dd4e..a495e57  main -> main
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git pull
+Already up to date.
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ vi index.html
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git add index.html
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git commit -m "changes made to test conflict"
+[main efcba7b] changes made to test conflict
+ 1 file changed, 1 insertion(+)
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 668 bytes | 44.00 KiB/s, done.
+From https://github.com/jahnavi-karanam/git-initi-Exercise-9
+   a495e57..2a078b0  main       -> origin/main
+Auto-merging index.html
+CONFLICT (content): Merge conflict in index.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main|MERGING)
+$ git mergetool
+
+This message is displayed because 'merge.tool' is not configured.
+See 'git mergetool --tool-help' or 'git help config' for more details.
+'git mergetool' will now attempt to use one of the following tools:
+opendiff kdiff3 tkdiff xxdiff meld tortoisemerge gvimdiff diffuse diffmerge ecmerge p4merge araxis bc codecompare smerge emerge vimdiff nvimdiff
+Merging:
+index.html
+
+Normal merge conflict for 'index.html':
+  {local}: modified file
+  {remote}: modified file
+Hit return to start merge resolution tool (vimdiff):
+4 files to edit
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main|MERGING)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   index.html
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        index.html.orig
+
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main|MERGING)
+$ rm -rf index.html.orig
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main|MERGING)
+$ git status
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+
+All conflicts fixed but you are still merging.
+  (use "git commit" to conclude merge)
+
+Changes to be committed:
+        modified:   index.html
+
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main|MERGING)
+$ git commit -m "merge conflict success"
+[main d49aff9] merge conflict success
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git checkout my-feature
+Switched to branch 'my-feature'
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (my-feature)
+$ git push
+fatal: The current branch my-feature has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin my-feature
+
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (my-feature)
+$ git push --set-upstream origin my-feature
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (6/6), 599 bytes | 599.00 KiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 1 local object.
+remote:
+remote: Create a pull request for 'my-feature' on GitHub by visiting:
+remote:      https://github.com/jahnavi-karanam/git-initi-Exercise-9/pull/new/my-feature
+remote:
+To https://github.com/jahnavi-karanam/git-initi-Exercise-9.git
+ * [new branch]      my-feature -> my-feature
+Branch 'my-feature' set up to track remote branch 'my-feature' from 'origin'.
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (my-feature)
+$ git checkout main
+Switched to branch 'main'
+Your branch is ahead of 'origin/main' by 2 commits.
+  (use "git push" to publish your local commits)
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git push
+To https://github.com/jahnavi-karanam/git-initi-Exercise-9.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/jahnavi-karanam/git-initi-Exercise-9.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Nithi@LAPTOP-R4SU6TA3 MINGW64 ~/Desktop/Python/git-initi-Exercise-9 (main)
+$ git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 685 bytes | 22.00 KiB/s, done.
+From https://github.com/jahnavi-karanam/git-initi-Exercise-9
+   2a078b0..5aa54c3  main       -> origin/main
+Merge made by the 'recursive' strategy.
+ about-us1.html | 2 ++
+ 1 file changed, 2 insertions(+)
+ create mode 100644 about-us1.html
